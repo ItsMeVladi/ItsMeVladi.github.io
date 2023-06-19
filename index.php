@@ -1,3 +1,26 @@
+<?php
+/* Initialization and getting of variables */
+$sender = $_REQUEST["sender"];
+$content = $_REQUEST["content"];
+$subject = $_REQUEST["subject"];
+$header = "From:"echo $sender + "\r\n";
+$to = "vladimiragbuyam@gmail.com";
+
+$retval = mail ($to, $subject, $content, $header);
+
+if( $retval == true ) {
+   echo "Message sent successfully...";
+}else {
+   echo "Message could not be sent...";
+}
+?>
+
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html>
    <head>
@@ -357,17 +380,17 @@
                </div>
             </div>
          </div>
+         <form method="post">
          <div class="container-fluid">
             <div class="contact_section_2">
                <div class="row">
                   <div class="col-md-12">
                      <div class="mail_section_1">
                         <input type="text" class="mail_text" placeholder="Your Name" name="Your Name">
-                        <input type="text" class="mail_text" placeholder="Your Email" name="Your Email">
-                        <input type="text" class="mail_text" placeholder="Your Phone" name="Your Phone">
-                        <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="Massage"></textarea>
-                        <div class="send_bt"><a href="#">SEND</a></div>
-                     </div>
+                        <input type="text" class="mail_text" placeholder="Your Email" name="Your Email" id="from">
+                        <input type="text" class="mail_text" placeholder="Your Subject" name="Your Subject" id="subject">
+                        <textarea class="massage-bt" placeholder="Content of Email" rows="5" name="Massage" id="content"></textarea>
+                        <input type="submit">Submit</input>
                   </div>
                   <div class="map_main">
                      <div class="map-responsive">
@@ -377,6 +400,7 @@
                </div>
             </div>
          </div>
+                        </form>
       </div>
       <!-- contact section end -->
       <!-- footer section start -->
