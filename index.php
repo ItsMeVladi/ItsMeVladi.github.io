@@ -16,8 +16,6 @@ if( $retval == true ) {
 ?>
 
 
-?>
-
 
 
 
