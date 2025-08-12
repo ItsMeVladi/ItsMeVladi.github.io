@@ -1,0 +1,86 @@
+/* Navigation Bar */
+nav.bg-body-tertiary {
+    --bs-bg-opacity: 1;
+    background-color: transparent !important; /* Dark semi-transparent background */
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-top: 1rem;
+}
+
+nav.bg-body-tertiary .nav-link,
+nav.bg-body-tertiary .navbar-text {
+    color: black !important;
+}
+
+nav.bg-body-tertiary .nav-link.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Misc. */
+img.ATLogo {
+    /* Properly down scaling the size of the logo */
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    border: 10rem;
+}
+
+a.logo {
+    max-width: 5% !important;
+    display: inline-block;
+    text-decoration: none;
+    /* border: 2px solid red; */
+    padding: 0;
+}
+
+/* Home section */
+section.home {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+.home div.left {
+    width: 40%; /* 1/4 of the screen */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.home div.right {
+    flex: 1; /* Let it take available space dynamically */
+    min-height: 300px; /* Ensure it has a minimum height */
+    background-image: url(Resources/Agbuya.jpg);
+    background-size: contain; /* Show the whole image without cropping */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent; /* Fill empty space if image doesn’t cover entire area */
+}
+
+/* Mobile view: stack image and text vertically */
+@media (max-width: 768px) {
+    section.home {
+        flex-direction: column; /* Stack instead of side-by-side */
+    }
+
+    .home div.left,
+    .home div.right {
+        width: 100%;
+        min-height: 300px;
+    }
+}
+
+/* Tech Stack Section */
+span.bg-secondary {
+    margin-left: 0.3rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Ensure content starts below fixed navbar */
+body {
+    padding-top: 80px; /* Adjust depending on your navbar height */
+}
