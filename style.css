@@ -17,6 +17,26 @@ nav.bg-body-tertiary .nav-link.active {
     text-decoration: underline;
 }
 
+/* Mobile collapsed navbar menu */
+@media (max-width: 991px) { /* Bootstrap md breakpoint */
+    .navbar-collapse {
+        background-color: rgba(240, 240, 240, 0.95); /* Light gray with slight transparency */
+        border: 1px solid rgba(0, 0, 0, 0.1); /* Soft outline */
+        border-radius: 8px;
+        padding: 0.5rem;
+        margin-top: 0.5rem;
+    }
+
+    .navbar-collapse .nav-link {
+        color: black !important; /* Keep links readable */
+    }
+
+    .navbar-collapse .nav-link:hover {
+        background-color: rgba(0, 0, 0, 0.05); /* Light hover effect */
+        border-radius: 4px;
+    }
+}
+
 /* Misc. */
 img.ATLogo {
     /* Properly down scaling the size of the logo */
@@ -33,6 +53,19 @@ a.logo {
     /* border: 2px solid red; */
     padding: 0;
 }
+
+/* Larger logo on mobile */
+@media (max-width: 768px) {
+    a.logo {
+        max-width: 20% !important; /* Increase logo size */
+    }
+
+    img.ATLogo {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
 
 /* Home section */
 section.home {
